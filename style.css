@@ -1,0 +1,13 @@
+table{
+	border: 1px solid green;
+	background: white;
+}
+table a{
+	color: black;
+	text-decoration: none;
+}
+table td{
+	width:300;
+	border: 1px solid green;
+	text-align: center;
+}

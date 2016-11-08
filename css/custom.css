@@ -1,0 +1,52 @@
+.container .content{
+  margin-top: 50px;
+}
+.navbar{
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+.navbar .nav li a{
+  color: white !important;
+}
+.nav>li>a:focus, .nav>li>a:hover{
+  background-color: transparent !important;
+  color: #F1F1F1 !important;
+}
+
+.xf-white{
+  color: #FFFFFF !important;
+}
+.xf-blue{
+  color: #3F88C5 !important;
+}
+.xf-dark-blue{
+  color: #032B43 !important;
+}
+.xf-yellow{
+  color: #FFBA08 !important;
+}
+.xf-red{
+  color: #D00000 !important;
+}
+.xf-green{
+  color: #136F63 !important;
+}
+.xf_bg-blue{
+  background-color: #3F88C5 !important;
+}
+.xf_bg-dark-blue{
+  background-color: #032B43 !important;
+}
+.xf_bg-yellow{
+  background-color: #FFBA08 !important;
+}
+.xf_bg-red{
+  background-color: #D00000 !important;
+}
+.xf_bg-green{
+  background-color: #136F63 !important;
+}
+.xf_bg-white{
+  background-color: #FFFFFF !important;
+}
