@@ -11,9 +11,14 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse xf-white">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li class="active"><a href="cadastopessoa.php">Cadastrar Pessoas</a></li>
+        <li class="active"><a href="pessoa.php">Pessoas Cadastradas</a></li>
+        <li><a href="#calculo">Calculo de Gordura Corporal</a></li>
+        <li><a href="#laudos">Laudos</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+        <li class="pull-right"><a href="#sair">Sair</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
