@@ -13,7 +13,12 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="<?php echo $path; ?>">Home</a></li>
         <li><a href="<?php echo $path."/pessoa" ?>">Pessoa</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#calculo">Calculo de Gordura Corporal</a></li>
+        <li><a href="#laudos">Laudos</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+        <li class="pull-right"><a href="#sair">Sair</a></li>
       </ul>
       <ul class="nav navbar-nav pull-right">
         <li class=""><a href="#">Sair</a></li>
