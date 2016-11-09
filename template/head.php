@@ -1,6 +1,6 @@
-<?php $path = "http://localhost/php/"; ?>
+<?php $path = "http://localhost/xfitness/"; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +17,9 @@
 
     <!--Bootstrap Theme CSS-->
     <link href="<?php echo $path; ?>/css/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="<?php echo $path; ?>/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="<?php echo $path; ?>/css/custom.css" rel="stylesheet">
   </head>

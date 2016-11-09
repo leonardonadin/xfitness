@@ -8,7 +8,7 @@
           <li><a href="#">Home</a></li>
           <li class="active">Pessoa</li>
         </ol>
-        <a class="pull-right btn btn-primary" href="#">Adicionar</a>
+        <a class="pull-right btn btn-primary" href="<?php echo $path; ?>pessoaadd">Adicionar</a>
         <h2>Pessoas</h2>
         <div class="panel panel-default">
           <table class="table">
