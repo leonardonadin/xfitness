@@ -1,4 +1,4 @@
-<?php $path = "http://localhost/xfitness/"; ?>
+<?php $path = "http://localhost/xfitness"; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
