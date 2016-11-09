@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand xf-white" href="#">XFitness</a>
+      <a class="navbar-brand xf-white" href="index.php">XFitness</a>
     </div>
     <div id="navbar" class="collapse navbar-collapse xf-white">
       <ul class="nav navbar-nav">
@@ -18,7 +18,7 @@
         <li><a href="#sobre">Sobre</a></li>
       </ul>
       <ul class="nav navbar-nav pull-right">
-        <li class="pull-right"><a href="#sair">Sair</a></li>
+        <li class="pull-right"><a href="login.php">Sair</a></li>
       </ul>
       <ul class="nav navbar-nav pull-right">
         <li class=""><a href="#">Sair</a></li>
