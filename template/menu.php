@@ -20,9 +20,6 @@
       <ul class="nav navbar-nav pull-right">
         <li class="pull-right"><a href="login.php">Sair</a></li>
       </ul>
-      <ul class="nav navbar-nav pull-right">
-        <li class=""><a href="#">Sair</a></li>
-      </ul>
     </div><!--/.nav-collapse -->
   </div>
 </nav>
