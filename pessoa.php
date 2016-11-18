@@ -45,6 +45,12 @@
                 <td>
                   10/10/1010
                 </td>
+                <td>
+                  <div class="btn-toolbar" role="toolbar">
+                    <div class="btn-group btn btn-success" role="group">Editar</div>
+                    <div class="btn-group btn btn-danger" role="group">Excluir</div>
+                  </div>
+                </td>
               </tr>
             </tbody>
           </table>

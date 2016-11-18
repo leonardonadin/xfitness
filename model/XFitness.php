@@ -1,5 +1,5 @@
 <?php
-include 'db/db.php';
+include 'db/DB.php';
 
 /**
  *
@@ -21,21 +21,21 @@ class XFitness
 
   public function create(){
     $data = [];
-    foreach ($columns as $key => $value) {
+    foreach ($this->columns as $key) {
       if(isset($_POST[$key])){
         $data[$key] = $_POST[$key];
       }
     }
     $validation = $this->validateCreate($data);
+    var_dump($data);
     if($validation === true){
-      $this->db->insert(array('id', 'coluna'), array(1, 'valor'));
+      $this->db->insert($data);
     }else{
-      return $error_messages[$validation];
+      return $this->error_messages[$validation];
     }
   }
 
-  protected function validateCreate($data = array()){
-    return (!empty($data));
+  protected function validateCreate($data){
     if(gettype($data['coluna'])){
       return 'coluna';
     }

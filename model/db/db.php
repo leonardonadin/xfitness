@@ -16,23 +16,30 @@ class DB{
 		}
 	}
 
-	public function insert($column_name = array(), $values = array()){
-		$columns = "";
+	public function insert($data = array()){
+		$columns_values = "";
+		$columns_name = "";
+		$values = [];
 		$i = 1;
-		foreach ($values as $key => $value) {
-			$columns .= "?";
+		foreach ($data as $key => $value) {
+			$columns_name .= $key;
+			$columns_values .= "?";
+			$values[] = $value;
 			if(count($values) !== $i++){
-				$columns .= ",";
+				$columns_name .= ",";
+				$columns_values .= ",";
 			}
 		}
-		$comando = $this->conexao->prepare("INSERT INTO $this->table_name ($column_name) VALUES ($columns)");
+		var_dump($columns_name);
+		var_dump($columns_values);
+		$comando = $this->conexao->prepare("INSERT INTO $this->table_name ($columns_name) VALUES ($columns_values)");
 		$return = $comando->execute($values);
 		if($return){
 			echo "INSERÇÃO REALIZADA COM SUCESSO!";
 		}else{
 			echo "Inserção não foi realizada com sucesso";
 			print_r($comando->errorInfo());
-			var_dump($operacao);
+			var_dump($return);
 		}
 	}
 

@@ -5,7 +5,7 @@
     <title>Cadastrar Pessoa</title>
   </head>
   <body>
-    <form class="" action="pessoa.php" method="post">
+    <form class="" action="controller/PessoaController.php" method="post">
       <input type="text" name="nome" value="">
       <input type="submit" name="name" value="">
     </form>
