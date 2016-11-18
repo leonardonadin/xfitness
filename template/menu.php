@@ -13,7 +13,7 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="<?php echo $path; ?>">Home</a></li>
         <li><a href="<?php echo $path."/pessoa.php" ?>">Pessoa</a></li>
-        <li><a href="#calculo">Calculo de Gordura Corporal</a></li>
+        <li><a href="calculo.php">Calculo de Gordura Corporal</a></li>
         <li><a href="#laudos">Laudos</a></li>
         <li><a href="#sobre">Sobre</a></li>
       </ul>

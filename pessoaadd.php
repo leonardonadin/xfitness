@@ -5,7 +5,7 @@
 
       <div class="content">
         <ol class="breadcrumb">
-          <li><a href="#">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li class="active">Pessoa</li>
         </ol>
         <a id="form_submit" class="pull-right btn btn-success" href="#">Salvar</a>
