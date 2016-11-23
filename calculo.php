@@ -24,20 +24,134 @@
               </div>
             </div>
             <div class="row">
-              <div class="form-group col-md-3">
-                <label for="peso">Peso</label>
+              <div class="form-group col-md-4">
+                <label for="datmed">Data</label>
                 <div class="input-group">
-                  <span class="input-group-addon" id="basic-addon1"><i class="fa fa-balance-scale"></i></span>
-                  <input type="text" name="pesmed" class="form-control" placeholder="Peso" required="">
+                  <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                  <input type="date" name="datmed" class="form-control" placeholder="Data" required>
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="pesmed">Peso</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-balance-scale"></i></span>
+                  <input type="text" name="pesmed" class="form-control" placeholder="Peso" required>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="form-group col-md-12">
-                <label for="nome">Nome</label>
+              <div class="form-group col-md-3">
+                <label for="tridcmed">Dobra cutânea do tríceps</label>
                 <div class="input-group">
-                  <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
-                  <input type="text" name="nompes" class="form-control" placeholder="Nome" required>
+                  <span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
+                  <input type="text" name="tridcmed" class="form-control" placeholder="Dobra cutânea do tríceps" required>
+                </div>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="adbcmed">Dobra cutânea do abdômen</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+                  <input type="text" name="advcmed" class="form-control" placeholder="Dobra cutânea do abdômen" required>
+                </div>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="sildcmed">Dobra cutânea supra ilíaca</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+                  <input type="text" name="sildcmed" class="form-control" placeholder="Dobra cutânea supra ilíaca" required>
+                </div>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="coxdcmed">Dobra cutânea da coxa</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+                  <input type="text" name="coxdcmed" class="form-control" placeholder="Dobra cutânea da coxa" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-3">
+                <label for="sesdcmed">Dobra cutânea subescapular</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
+                  <input type="text" name="sesdcmed" class="form-control" placeholder="Dobra cutânea subescapular" required>
+                </div>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="quacimed">Circunferência do Quadril</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
+                  <input type="text" name="quacimed" class="form-control" placeholder="Circunferência do Quadril" required>
+                </div>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="pescimed">Circunferência do pescoço</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
+                  <input type="text" name="pescimed" class="form-control" placeholder="Circunferência do pescoço" required>
+                </div>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="cincimed">Circunferência da cintura</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
+                  <input type="text" name="cincimed" class="form-control" placeholder="Circunferência da cintura" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="for-group col-md-3">
+                <label for="gormed">Porcentagem de gordura</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-balance-scale"></i></span>
+                  <input type="text" name="gormed" class="form-control" placeholder="Porcentagem de gordura" required>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="form-group col-md-4">
+                <label for="denmed">Densidade corporal</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-balance-scale"></i></span>
+                  <input type="text" name="denmed" class="form-control" placeholder="Densidade corporal" required>
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="pesgmed">Peso gordura</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-balance-scale"></i></span>
+                  <input type="text" name="pesgmed" class="form-control" placeholder="Peso gordura" required>
+                </div>
+              </div>
+              <div class="for-group col-md-4">
+                <label for="pesmmed">Peso magro</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-balance-scale"></i></span>
+                  <input type="text" name="pesmmed" class="form-control" placeholder="Peso magro" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="for-group col-md-4">
+                <label for="pesimed">Peso ideal</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-balance-scale"></i></span>
+                  <input type="text" name="pesimed" class="form-control" placeholder="Peso ideal" required>
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="imdmed">Índice de massa corporal</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-balance-scale"></i></span>
+                  <input type="text" name="pesimed" class="form-control" placeholder="Índice de massa corporal" required>
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="rcqmed">Razão Cintura-Quadril</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
+                  <input type="text" name="reqmed" class="form-control" placeholder="Razão Cintura-Quadril" required>
                 </div>
               </div>
             </div>
