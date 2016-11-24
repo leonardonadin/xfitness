@@ -5,10 +5,10 @@
       <div class="content">
         <ol class="breadcrumb">
           <li><a href="index.php">Home</a></li>
-          <li class="active">Pessoa</li>
+          <li class="active">Perfil</li>
         </ol>
         <a id="form_submit" class="pull-right btn btn-success" href="#">Salvar</a>
-        <h2>Pessoas <small>/ adicionar</small></h2>
+        <h2>Perfil <small>/ editar</small></h2>
         <?php if(array_key_exists('msg', $_GET)){ ?>
           <br>
           <div class="panel-heading alert alert-danger">
@@ -85,6 +85,7 @@
           </div>
         </div>
       </div>
+
     </div><!-- /.container -->
 
 <?php include 'template/footer.php'; ?>
