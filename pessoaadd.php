@@ -5,7 +5,8 @@
       <div class="content">
         <ol class="breadcrumb">
           <li><a href="index.php">Home</a></li>
-          <li class="active">Pessoa</li>
+          <li><a href="pessoa.php">Pessoa</a></li>
+          <li class="active">Adicionar</li>
         </ol>
         <a id="form_submit" class="pull-right btn btn-success" href="#">Salvar</a>
         <h2>Pessoas <small>/ adicionar</small></h2>

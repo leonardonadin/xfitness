@@ -7,7 +7,7 @@
         <li><a href="index.php">Home</a></li>
         <li class="active">Calculo</li>
       </ol>
-      <a id="form_submit" class="pull-right btn btn-success" href="#">Calcular</a>
+      <a id="form_submit" class="pull-right btn btn-success" href="calculores.php">Calcular</a>
       <h2>Gordura Corporal <small>/ calcular</small></h2>
       <?php if (array_key_exists('msg',$_GET)) { ?>
         <br>
@@ -19,11 +19,9 @@
         <div class="panel-body">
           <form action="#controller/medicaocontrole" method="post" validate>
             <div class="row">
-              <div class="form-group col-md-3">
+              <div class="form-group col-md-0">
                 <input type="hidden" name="name" value="">
               </div>
-            </div>
-            <div class="row">
               <div class="form-group col-md-2"></div>
               <div class="form-group col-md-4">
                 <label for="datmed">Data</label>
@@ -107,53 +105,6 @@
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-balance-scale"></i></span>
                   <input type="text" name="gormed" class="form-control" placeholder="Porcentagem de gordura" required>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div class="row">
-              <div class="form-group col-md-4">
-                <label for="denmed">Densidade corporal</label>
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-balance-scale"></i></span>
-                  <input type="text" name="denmed" class="form-control" placeholder="Densidade corporal" required>
-                </div>
-              </div>
-              <div class="form-group col-md-4">
-                <label for="pesgmed">Peso gordura</label>
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-balance-scale"></i></span>
-                  <input type="text" name="pesgmed" class="form-control" placeholder="Peso gordura" required>
-                </div>
-              </div>
-              <div class="for-group col-md-4">
-                <label for="pesmmed">Peso magro</label>
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-balance-scale"></i></span>
-                  <input type="text" name="pesmmed" class="form-control" placeholder="Peso magro" required>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="for-group col-md-4">
-                <label for="pesimed">Peso ideal</label>
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-balance-scale"></i></span>
-                  <input type="text" name="pesimed" class="form-control" placeholder="Peso ideal" required>
-                </div>
-              </div>
-              <div class="form-group col-md-4">
-                <label for="imdmed">Índice de massa corporal</label>
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-balance-scale"></i></span>
-                  <input type="text" name="pesimed" class="form-control" placeholder="Índice de massa corporal" required>
-                </div>
-              </div>
-              <div class="form-group col-md-4">
-                <label for="rcqmed">Razão Cintura-Quadril</label>
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
-                  <input type="text" name="reqmed" class="form-control" placeholder="Razão Cintura-Quadril" required>
                 </div>
               </div>
             </div>
