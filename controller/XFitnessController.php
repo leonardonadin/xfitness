@@ -1,7 +1,17 @@
 <?php
-$url_base = 'http://localhost/xfitness/';
+require_once './Response.php';
 
-function post($url, $data, $optional_headers = null)
+/**
+ *
+ */
+class XFitnessController
+{
+
+
+
+}
+
+function _post($url, $data, $optional_headers = null)
 {
   $params = array('http' => array(
               'method' => 'POST',
@@ -13,7 +23,7 @@ function post($url, $data, $optional_headers = null)
   $ctx = stream_context_create($params);
   $fp = @fopen($url_base.$url, 'rb', false, $ctx);
   if (!$fp) {
-    throw new Exception("Problem with $url, $php_errormsg");
+    throw new Exception("Problem with ".$url.", ".$php_errormsg);
   }
   $response = @stream_get_contents($fp);
   if ($response === false) {

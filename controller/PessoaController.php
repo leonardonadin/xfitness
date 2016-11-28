@@ -1,13 +1,31 @@
 <?php
-include 'XFitnessController.php';
-include '../model/Pessoa.php';
+require_once 'XFitnessController.php';
+require_once './model/Pessoa.php';
 
-$method = $_SERVER["REQUEST_METHOD"];
+class PessoaController extends XFitnessController{
 
-if($method == 'GET'){
-  header("pessoa.php");
-}elseif($method == 'POST'){
-  $pessoa = new Pessoa();
-  $msg = $pessoa->create();
-  post('/xfitness/pessoaadd.php', $msg);
+  public function index(){
+    $pessoa = new Pessoa();
+    $pessoas = $pessoa->getPessoas();
+    Response::get('view/pessoa/index.php', $pessoas);
+  }
+
+  public function create(){
+    Response::get('view/pessoa/new.php');
+  }
+
+  public function update(){
+    $pessoa = new Pessoa();
+    $pessoa->update($_GET('cod'));
+  }
+
+  public function store(){
+    $pessoa = new Pessoa();
+    $msg = $pessoa->create();
+    Response::post('view/pessoa/new.php', $_POST, $msg);
+  }
+
+  public function delete(){
+
+  }
 }

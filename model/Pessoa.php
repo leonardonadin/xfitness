@@ -1,5 +1,5 @@
 <?php
-include 'XFitness.php';
+require_once 'XFitness.php';
 
 /**
  *
@@ -7,6 +7,10 @@ include 'XFitness.php';
 class Pessoa extends XFitness
 {
   protected $table = 'pessoa';
+
+  protected $data;
+
+  protected $success_message = 'Pessoa adicionada com sucesso!';
 
   protected $columns = [
     'nompes',
@@ -19,7 +23,7 @@ class Pessoa extends XFitness
   ];
 
   protected $error_messages = [
-    'nompes-vazio'        => 'Informe um nome válido',
+    'nompes-vazio'      => 'Informe um nome válido',
     'dtnaspes-vazio'    => 'Informe uma data de nascimento',
     'emailpes-vazio'    => 'Informe um e-mail valido',
     'sexpes-vazio'      => 'Informe o sexo'
@@ -39,5 +43,24 @@ class Pessoa extends XFitness
       return 'sexpes-vazio';
     }
     return true;
+  }
+
+  public function getPessoa($codpes){
+    $fields = '*';
+    $where = 'codpes='.$codpes;
+    $result = $this->db->select($fields);
+    $pessoas = array();
+    $this->data = $result->fetch(PDO::FETCH_ASSOC);
+    return $this->data;
+  }
+
+  public function getPessoas(){
+    $fields = '*';
+    $result = $this->db->select($fields);
+    $pessoas = array();
+    while ($line = $result->fetch(PDO::FETCH_ASSOC)){
+      $pessoas[] = $line;
+    };
+    return $pessoas;
   }
 }

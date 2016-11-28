@@ -1,5 +1,6 @@
 <?php
-include 'XFitness.php';
+require_once 'XFitness.php';
+require_once 'Pessoa.php';
 
 /**
  *
@@ -8,18 +9,27 @@ class Professor extends XFitness
 {
   protected $table = 'professor';
 
+  protected $pessoa;
+
+  protected $data;
+
   protected $columns = [
-    'codpes'
+    'codpro'
   ];
 
   protected $error_messages = [
-    'codpes-vazio'        => 'Informe um nome válido'
+    'codpro-vazio'        => 'Informe um nome válido'
   ];
 
   protected function validateCreate($data = array()){
-    if(empty($data['codpes'])){
-      return 'codpes-vazio';
+    if(empty($data['codpro'])){
+      return 'codpro-vazio';
     }
     return true;
+  }
+
+  protected function getPessoa(){
+    $this->pessoa = new Pessoa();
+    $this->pessoa->getPessoa();
   }
 }
