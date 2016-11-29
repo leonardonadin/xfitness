@@ -46,8 +46,8 @@
                       </td>
                       <td>
                         <div class="btn-toolbar" role="toolbar">
-                          <div class="btn-group btn btn-success" role="group">Editar</div>
-                          <div class="btn-group btn btn-danger" role="group">Excluir</div>
+                          <a class="btn-group btn btn-success" role="group" href="/xfitness/pessoa/editar?codpes=<?php echo $value['codpes'] ?>">Editar</a>
+                          <a class="btn-group btn btn-danger" role="group" href="/xfitness/pessoa/excluir?codpes=<?php echo $value['codpes'] ?>">Excluir</a>
                         </div>
                       </td>
                     </tr>

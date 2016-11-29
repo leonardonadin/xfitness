@@ -1,13 +1,12 @@
 <?php
 require_once 'db/DB.php';
 
-/**
- *
- */
 class XFitness{
   protected $db = null;
 
   protected $table = '';
+
+  protected $primary_key = '';
 
   protected $columns = [];
 
@@ -15,8 +14,7 @@ class XFitness{
 
   protected $success_message = '';
 
-  function __construct()
-  {
+  function __construct(){
     $this->db =  new DB($this->table);
   }
 
@@ -29,8 +27,13 @@ class XFitness{
     }
     $validation = $this->validateCreate($data);
     if($validation === true){
-      $this->db->insert($data);
-      return $this->success_message;
+      $data = $this->sanitizeCreate($data);
+      $result = $this->db->insert($data);
+      if($result){
+        return $this->success_message;
+      }else{
+        return $result;
+      }
     }else{
       return $this->error_messages[$validation];
     }
@@ -42,9 +45,11 @@ class XFitness{
     }
   }
 
-  //LARAVEL CRUD
+  protected function sanitizeCreate($data = array()){
+    return $data;
+  }
 
-  public function update(){
+  public function update($cod){
     $data = [];
     foreach ($this->columns as $key) {
       if(isset($_POST[$key])){
@@ -52,12 +57,15 @@ class XFitness{
       }
     }
     $validation = $this->validateCreate($data);
-    var_dump($data);
     if($validation === true){
-      $this->db->insert($data);
-      return $this->success_message;
+      $result = $this->db->update($this->columns, $data, $this->primary_key."=".$cod);
+      if($result){
+        return $this->success_message;
+      }else{
+        return $result;
+      }
     }else{
-      return $this->error_messages[$validation];
+      return ['error'=>$this->error_messages[$validation]];
     }
   }
 

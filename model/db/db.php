@@ -9,7 +9,6 @@ class DB{
 		try {
 			$this->conexao = new PDO(
 		'pgsql:host=localhost;dbname=xfitness',
-					// usuario, senha
 					'postgres','postgres');
 			$this->table_name = $table_name;
 		} catch (PDOException $e) {
@@ -19,9 +18,16 @@ class DB{
 
 	public function select($fields,$where = ''){
 		$sql = "SELECT ".$fields." FROM ".$this->table_name;
+		var_dump($where);
 		if(!empty($where)){
 			$sql .= " WHERE ".$where;
 		}
+		$results = $this->conexao->query($sql);
+		return $results;
+	}
+
+	public function selectProcedure($procedure){
+		$sql = "SELECT ".$procedure.";";
 		$results = $this->conexao->query($sql);
 		return $results;
 	}
@@ -40,9 +46,6 @@ class DB{
 				$columns_values .= ",";
 			}
 		}
-		var_dump($columns_name);
-		var_dump($columns_values);
-		var_dump($values);
 		$comando = $this->conexao->prepare("INSERT INTO ".$this->table_name." ($columns_name) VALUES ($columns_values)");
 		$return = $comando->execute($values);
 		if($return){
@@ -55,23 +58,29 @@ class DB{
 		}
 	}
 
-	public function update($column_name = array(), $values = array()){
+	public function update($column_name = array(), $values = array(), $condition = ''){
 		$columns = "";
 		$i = 1;
-		foreach ($values as $key => $value) {
-			$columns .= "?";
+		foreach ($column_name as $value) {
+			$columns .= $value."=:".$value;
 			if(count($values) !== $i++){
 				$columns .= ",";
 			}
 		}
-		$comando = $this->conexao->prepare("INSERT INTO $this->table_name ($column_name) VALUES ($columns)");
+		//UPDATE table SET column1 = value1,column2 = value2 ,...WHERE condition;
+		$sql = "UPDATE TABLE $this->table_name SET $columns";
+		if($condition != ''){
+			$sql .= " WHERE ".$condition;
+		}
+		$sql .= ";";
+		var_dump($sql);
+		$comando = $this->conexao->prepare($sql);
 		$return = $comando->execute($values);
 		if($return){
-			echo "INSERÇÃO REALIZADA COM SUCESSO!";
+			return true;
 		}else{
-			echo "Inserção não foi realizada com sucesso";
-			print_r($comando->errorInfo());
-			var_dump($operacao);
+			echo "Atualização não foi realizada com sucesso";
+			return ['error'=>$comando->errorInfo()];
 		}
 	}
 

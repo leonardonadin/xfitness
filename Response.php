@@ -1,7 +1,5 @@
 <?php
-/**
- *
- */
+
 class Response{
 
   const URL = 'http://localhost/xfitness';

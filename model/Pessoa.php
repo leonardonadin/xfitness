@@ -10,6 +10,8 @@ class Pessoa extends XFitness
 
   protected $data;
 
+  protected $primary_key = 'codpes';
+
   protected $success_message = 'Pessoa adicionada com sucesso!';
 
   protected $columns = [
@@ -19,7 +21,8 @@ class Pessoa extends XFitness
     'sexpes',
     'telpes',
     'civpes',
-    'propes'
+    'propes',
+    'senpes'
   ];
 
   protected $error_messages = [
@@ -45,11 +48,15 @@ class Pessoa extends XFitness
     return true;
   }
 
+  protected function sanitizeCreate($data = array()){
+    $data['senpes'] = md5($data['senpes']);
+    return $data;
+  }
+
   public function getPessoa($codpes){
     $fields = '*';
     $where = 'codpes='.$codpes;
     $result = $this->db->select($fields);
-    $pessoas = array();
     $this->data = $result->fetch(PDO::FETCH_ASSOC);
     return $this->data;
   }
