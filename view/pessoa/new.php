@@ -1,4 +1,3 @@
-<br><br><br>
 <?php
 function autoFillable($field){
   if(!empty($data)){

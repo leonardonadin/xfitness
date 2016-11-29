@@ -15,6 +15,9 @@
           <table class="table">
             <thead>
               <td>
+                Código
+              </td>
+              <td>
                 Nome
               </td>
               <td>
@@ -30,10 +33,16 @@
                   foreach ($data as $key => $value) { ?>
                     <tr>
                       <td>
-                        <?php echo $value['nompes'] ?>
+                        <?php echo $value['codpes']; ?>
                       </td>
                       <td>
-                        <?php echo $value['dtnaspes'] ?>
+                        <?php echo $value['nompes']; ?>
+                      </td>
+                      <td>
+                        <?php
+                          $date = new DateTime($value['dtnaspes']);
+                          echo $date->format('d-m-Y');
+                        ?>
                       </td>
                       <td>
                         <div class="btn-toolbar" role="toolbar">

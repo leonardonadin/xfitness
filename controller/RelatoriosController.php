@@ -3,6 +3,7 @@ require_once 'XFitnessController.php';
 require_once './model/Pessoa.php';
 require_once './model/Aluno.php';
 require_once './model/Medicao.php';
+require_once './model/Professor.php';
 
 /**
  *
@@ -21,6 +22,14 @@ class RelatoriosController extends XFitnessController{
         $medicao = new Medicao();
         $result = $medicao->relatorio();
         Response::get('view/medicao/relatorio2.php', $result);
+      }elseif ($relatorio == 3) {
+        $aluno = new Aluno();
+        $result = $aluno->relatorio3();
+        Response::get('view/aluno/relatorio3.php', $result);
+      }elseif ($relatorio == 4) {
+        $professor = new Professor();
+        $result = $professor->relatorio();
+        Response::get('view/professor/relatorio4.php', $result);
       }
     }else{
       Response::get('view/relatorios.php');

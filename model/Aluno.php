@@ -48,4 +48,15 @@ class Aluno extends XFitness
     };
     return $data;
   }
+
+  public function relatorio3(){
+    $fields = '*';
+    $db = new DB('relatorio3');
+    $result = $db->select($fields);
+    $data = array();
+    while ($line = $result->fetch(PDO::FETCH_ASSOC)){
+      $data[] = $line;
+    };
+    return $data;
+  }
 }

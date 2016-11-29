@@ -30,6 +30,7 @@ $router->add('/pessoa', [new PessoaController, 'index']);
 $router->add('/pessoa/nova', [new PessoaController, 'create']);
 $router->add('/pessoa/salvar', [new PessoaController, 'store'], 'POST');
 
+$router->add('/medicao/novo', [new MedicaoController, 'create']);
 $router->add('/medicao/editar', [new MedicaoController, 'update']);
 
 $router->add('/relatorios', [new RelatoriosController, 'index']);

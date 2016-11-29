@@ -11,7 +11,6 @@
         </ol>
         <h1>Relatório 02</h1>
         <h4><small>Relacionar o nome e a data de nascimento de alunos com menos de 20 anos</small></h4>
-        <?php var_dump($data); ?>
         <table class="table">
           <thead>
             <td>Código</td>
@@ -39,7 +38,9 @@
                   </tr>
                 <?php }
               }
-            } ?>
+            }else{ ?>
+              <td>Não foram encontrados registros.</td>
+            <?php } ?>
           </tbody>
         </table>
       </div>

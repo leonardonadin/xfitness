@@ -16,7 +16,7 @@ class MedicaoController extends XFitnessController{
   public function create(){
     $pessoa = new Pessoa();
     $msg = $pessoa->create();
-    Controller::post('view/medicao/new.php', $msg);
+    Response::post('view/medicao/new.php', $msg);
   }
 
   public function update(){

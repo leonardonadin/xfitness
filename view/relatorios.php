@@ -12,6 +12,8 @@
         <ul>
           <li><a href="/xfitness/relatorios?relatorio=1">Relatório 01</a></li>
           <li><a href="/xfitness/relatorios?relatorio=2">Relatório 02</a></li>
+          <li><a href="/xfitness/relatorios?relatorio=3">Relatório 03</a></li>
+          <li><a href="/xfitness/relatorios?relatorio=4">Relatório 04</a></li>
         </ul>
       </div>
     </div><!-- /.container -->

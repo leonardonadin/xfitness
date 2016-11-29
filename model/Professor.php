@@ -32,4 +32,15 @@ class Professor extends XFitness
     $this->pessoa = new Pessoa();
     $this->pessoa->getPessoa();
   }
+
+  public function relatorio(){
+    $fields = '*';
+    $db = new DB('relatorio4');
+    $result = $db->select($fields);
+    $data = array();
+    while ($line = $result->fetch(PDO::FETCH_ASSOC)){
+      $data[] = $line;
+    };
+    return $data;
+  }
 }

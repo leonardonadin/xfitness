@@ -13,7 +13,7 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="/xfitness/">Home</a></li>
         <li><a href="/xfitness/pessoa">Pessoa</a></li>
-        <li><a href="/xfitness/calculo">Calculo de Gordura Corporal</a></li>
+        <li><a href="/xfitness/medicao/novo">Calculo de Gordura Corporal</a></li>
         <li><a href="/xfitness/relatorios">Laudos</a></li>
         <li><a href="#sobre">Sobre</a></li>
       </ul>
