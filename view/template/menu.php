@@ -19,6 +19,7 @@
       </ul>
       <ul class="nav navbar-nav pull-right">
         <li class="pull-right"><a href="login.php">Sair</a></li>
+        <li><a href="/xfitness/perfil"><b>Perfil</b></a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>

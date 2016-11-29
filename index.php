@@ -35,6 +35,10 @@ $router->add('/medicao/editar', [new MedicaoController, 'update']);
 
 $router->add('/relatorios', [new RelatoriosController, 'index']);
 
+$router->add('/perfil', function(){
+    Response::get('view/perfil.php');
+});
+
 $router->add('/', function(){
     Response::get('view/inicio.php');
 });
