@@ -1,5 +1,5 @@
-<?php include '/view/template/head.php'; ?>
-<?php include '/view/template/menu.php'; ?>
+<?php include 'view/template/head.php'; ?>
+<?php include 'view/template/menu.php'; ?>
 
     <div class="container">
 
@@ -10,4 +10,4 @@
     </div><!-- /.container -->
 
 
-<?php include '/view/template/footer.php'; ?>
+<?php include 'view/template/footer.php'; ?>

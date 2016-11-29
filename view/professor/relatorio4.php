@@ -30,7 +30,7 @@
                   </tr>
                 <?php }
               }else{ ?>
-                <td>Não foram encontrados registros.</td>
+                <td colspan="2">Não foram encontrados registros.</td>
               <?php }
             } ?>
           </tbody>

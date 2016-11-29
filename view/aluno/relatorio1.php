@@ -35,7 +35,7 @@
                 <?php }
               }
             }else{ ?>
-              <td>Não foram encontrados registros.</td>
+              <td colspan="3">Não foram encontrados registros.</td>
             <?php } ?>
           </tbody>
         </table>
